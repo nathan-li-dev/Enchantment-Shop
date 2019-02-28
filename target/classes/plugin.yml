@@ -1,0 +1,13 @@
+name: EnchantmentShop
+description: Buy enchants instead of using the table
+version: 1.0 SNAPSHOT
+api-version: 1.13
+main: com.monologica.enchantmentshop.EnchantmentShopPlugin
+author: Inavir
+depend: [Vault, SmartInvs]
+commands:
+  enchantmentshop:
+    aliases:
+      - eshop
+      - enchshop
+      - es

@@ -1,0 +1,287 @@
+gui:
+  name: "&0Enchantment Shop"
+  none:
+    name: "&4No enchantments available"
+    material: "BARRIER"
+    lore:
+      - ""
+      - "&c* &7No enchantments are available for this item."
+      - "&c* &7Right click on the enchantment table with an"
+      - "&7 &7 enchantable item to begin enchanting."
+      - ""
+  placeholder:
+    name: "&8"
+    material: "BLACK_STAINED_GLASS_PANE"
+    lore: []
+  enchantment:
+    name: "&3{ENCHANTMENT_NAME} &7({CURRENT_LEVEL} → {NEXT_LEVEL})"
+    lore:
+      - ""
+      - "&fCost: &7{COST} silver"
+      - ""
+      - "&b* &7Upgrades {ENCHANTMENT_NAME} to level &b{NEXT_LEVEL}"
+      - "&b* &7{MAX_LEVEL_BUYABLE}!"
+      - ""
+  items:
+    aqua_affinity: IRON_PICKAXE
+    respiration: WATER_BUCKET
+    depth_strider: IRON_BOOTS
+    feather_falling: FEATHER
+    frost_walker: ICE
+    thorns: DEAD_FIRE_CORAL_FAN
+    unbreaking: IRON_BLOCK
+    fire_aspect: BLAZE_POWDER
+    knockback: PISTON
+    looting: SKELETON_SKULL
+    flame: BLAZE_POWDER
+    infinity: ARROW
+    punch: PISTON
+    efficiency: DIAMOND_PICKAXE
+    fortune: DIAMOND
+    silk_touch: DIAMOND_ORE
+    luck_of_the_sea: PUFFERFISH_BUCKET
+    lure: COD
+
+messages:
+  not_enough_money: "You don't have enough money to purchase this upgrade."
+  already_max_level: "Your item's enchantment level has already at max level"
+  missing_item: "The item to upgrade is no longer in your inventory."
+  on_place: "Right click with an enchantable item to begin. No bookshelves needed!"
+
+classes:
+  armour:
+    allowed_materials:
+      - TURTLE_HELMET
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - CHAINMAIL_HELMET
+      - CHAINMAIL_CHESTPLATE
+      - CHAINMAIL_LEGGINGS
+      - CHAINMAIL_BOOTS
+      - IRON_HELMET
+      - IRON_CHESTPLATE
+      - IRON_LEGGINGS
+      - IRON_BOOTS
+      - DIAMOND_HELMET
+      - DIAMOND_CHESTPLATE
+      - DIAMOND_LEGGINGS
+      - DIAMOND_BOOTS
+      - GOLDEN_HELMET
+      - GOLDEN_CHESTPLATE
+      - GOLDEN_LEGGINGS
+      - GOLDEN_BOOTS
+
+    enchants:
+      aqua_affinity:
+        max_level: 10
+        cost:
+          # LINEAR or MULTIPLICATIVE (exponential, f(x) = initial * modifier^x)
+          type: LINEAR
+          initial: 1000
+          modifier: 1
+
+      respiration:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      depth_strider:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      feather_falling:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      frost_walker:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      thorns:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      unbreaking:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+  melee_weapon:
+    allowed_materials:
+      - IRON_SWORD
+      - WOODEN_SWORD
+      - STONE_SWORD
+      - DIAMOND_SWORD
+      - GOLDEN_SWORD
+      - TRIDENT
+      - IRON_AXE
+      - WOODEN_AXE
+      - STONE_AXE
+      - DIAMOND_AXE
+      - GOLDEN_AXE
+      - WOODEN_HOE
+      - STONE_HOE
+      - IRON_HOE
+      - DIAMOND_HOE
+      - GOLDEN_HOE
+
+    enchants:
+      fire_aspect:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      knockback:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      looting:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      unbreaking:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+
+  bow:
+    allowed_materials:
+      - BOW
+
+    enchants:
+      flame:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      infinity:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      punch:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      looting:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      unbreaking:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+  tool:
+    allowed_materials:
+      - IRON_SHOVEL
+      - IRON_PICKAXE
+      - IRON_AXE
+      - WOODEN_SHOVEL
+      - WOODEN_PICKAXE
+      - WOODEN_AXE
+      - STONE_SHOVEL
+      - STONE_PICKAXE
+      - STONE_AXE
+      - DIAMOND_SHOVEL
+      - DIAMOND_PICKAXE
+      - DIAMOND_AXE
+      - GOLDEN_SHOVEL
+      - GOLDEN_PICKAXE
+      - GOLDEN_AXE
+
+    enchants:
+      efficiency:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      fortune:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      silk_touch:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      unbreaking:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+  rod:
+    allowed_materials:
+      - FISHING_ROD
+
+    enchants:
+      luck_of_the_sea:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      lure:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
+
+      unbreaking:
+        max_level: 10
+        cost:
+          type: LINEAR
+          initial: 1
+          modifier: 1
